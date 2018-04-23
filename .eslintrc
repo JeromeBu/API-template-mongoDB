@@ -1,0 +1,18 @@
+{
+  "extends": "airbnb",
+  "env": { "mocha": true },
+  "rules": {
+    "semi": [2, "never"],
+    "comma-dangle": ["error", "never"],
+    "func-names": ["error", "never"],
+    "arrow-parens": ["error", "as-needed"],
+    "function-paren-newline": "off",
+    "object-curly-newline": ["error", { "consistent": true }],
+    "no-unexpected-multiline": "off",
+    "no-underscore-dangle": ["error", { "allow": ["_self", "_errorHandler"] }],
+    "curly": "off",
+    "no-console": "off",
+    "space-before-function-paren": "off",
+    "no-param-reassign": ["error", { "props": false }]
+  }
+}

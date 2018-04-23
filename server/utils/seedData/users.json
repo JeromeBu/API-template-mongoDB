@@ -1,0 +1,24 @@
+[
+  {
+    "firstName": "Kévin",
+    "lastName": "Lemaire",
+    "email": "kevin@mail.com",
+    "password": "azer",
+    "image":
+      "https://cdn-images-1.medium.com/max/1200/1*J_omTluJQOYFHjywpTuhUA.jpeg"
+  },
+  {
+    "firstName": "Brice",
+    "lastName": "Tessier-Huort",
+    "email": "brice@mail.com",
+    "password": "azer",
+    "image": "https://avatars1.githubusercontent.com/u/12598956?s=460&v=4"
+  },
+  {
+    "firstName": "Jérôme",
+    "email": "jerome@mail.com",
+    "lastName": "Burkard",
+    "password": "azer",
+    "image": "https://avatars1.githubusercontent.com/u/22095555?v=4"
+  }
+]
