@@ -85,7 +85,7 @@ describe('User routes', () => {
   describe('PUT /api/users/:id', function() {
     before(async () => {
       await emptyDb()
-      // create a user and some sessions and activities
+
       this.user = await factory.user({ email: 'lulu@mail.com' })
       this.adminUser = await factory.user({
         email: 'admin@mail.com',
