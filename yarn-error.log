@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/9.3.0_1/bin/node /usr/local/bin/yarn run test
+  /usr/local/Cellar/node/9.3.0_1/bin/node /usr/local/bin/yarn test
 
 PATH: 
   /Users/jerome/Library/Android/sdk/tools/bin:/Users/jerome/Library/Android/sdk/tools:/Users/jerome/Library/Android/sdk/platform-tools:./bin:./node_modules/.bin:/Users/jerome/.rbenv/shims:/Users/jerome/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jerome/Library/Android/sdk/tools/bin:/Users/jerome/Library/Android/sdk/tools:/Users/jerome/Library/Android/sdk/platform-tools:./bin:./node_modules/.bin:/Users/jerome/.rbenv/shims:/Users/jerome/.rbenv/bin:/usr/local/sbin:/usr/local/sbin

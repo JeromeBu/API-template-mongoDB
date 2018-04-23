@@ -65,4 +65,11 @@ function mongooseDisconnect() {
   mongoose.connection.close()
 }
 
-module.exports = { app, mongooseDisconnect }
+let emptyDb
+if (config.ENV !== 'production') {
+  emptyDb = function() {
+    mongoose.connection.db.dropDatabase()
+  }
+}
+
+module.exports = { app, mongooseDisconnect, emptyDb }

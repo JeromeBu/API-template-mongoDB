@@ -1,6 +1,6 @@
 const server = require('../../../../index')
 const User = require('../model')
-const { emptyDb } = require('../../../utils/testUtils')
+const { emptyDb } = require('../../../server')
 const factory = require('../../../utils/modelFactory')
 
 const chai = require('chai')
