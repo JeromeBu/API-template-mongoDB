@@ -1,17 +1,17 @@
-const uid = require('uid2')
-const User = require('../api/user/model')
+const uid = require("uid2")
+const User = require("../api/user/model")
 
 const {
   randomDate,
   randomFromTable,
   roundMinutes
-} = require('./utilsFunctions')
-const faker = require('faker')
+} = require("./utilsFunctions")
+const faker = require("faker")
 
 const images = [
-  'https://www.shape.com/sites/shape.com/files/fb-crossfit-injuries.jpg',
-  'https://www.esdo.fr/wp-content/uploads/2016/12/banniere_trx_suspension_training.jpg',
-  'https://cdn-maf0.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/cardio-treadmill_1.jpg?itok=LTsMm6jA'
+  "https://www.shape.com/sites/shape.com/files/fb-crossfit-injuries.jpg",
+  "https://www.esdo.fr/wp-content/uploads/2016/12/banniere_trx_suspension_training.jpg",
+  "https://cdn-maf0.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/cardio-treadmill_1.jpg?itok=LTsMm6jA"
 ]
 
 const inTwoWeeks = new Date()
@@ -20,9 +20,9 @@ inTwoWeeks.setDate(inTwoWeeks.getDate() + 30)
 //  options: email, shortId, token, password, emailCheckValid
 // emailCheckToken, emailCheckCreatedAt, firstName, lastName,
 // gender, paidUntil, role
-function createUser(options = {}, callback) {
+function createUser(options = {}) {
   const promise = new Promise((resolve, reject) => {
-    const password = options.password || 'Password1'
+    const password = options.password || "Password1"
     const newUser = new User({
       shortId: options.shortId,
       email: options.email || faker.internet.email(),
@@ -37,24 +37,19 @@ function createUser(options = {}, callback) {
         token: options.passwordChangeToken || uid(20),
         createdAt: options.passwordChangeCreatedAt || new Date()
       },
-      role: options.role || 'user',
+      role: options.role || "user",
       account: {
         firstName: options.firstName || faker.name.firstName(),
         lastName: options.lastName || faker.name.lastName(),
         image: options.image
       }
     })
-    User.register(newUser, password, (err, user) => {
+
+    return User.register(newUser, password, (err, user) => {
       if (err) {
-        if (!callback) {
-          reject(new Error(`Could not create user : ${err}`))
-        } else {
-          console.error(`Could not create user :  ${err}`)
-        }
-      } else if (!callback) {
-        resolve(user)
+        reject(new Error(`Could not create user : ${err}`))
       } else {
-        callback(user)
+        resolve(user)
       }
     })
   })
