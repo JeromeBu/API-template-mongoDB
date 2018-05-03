@@ -2,6 +2,7 @@
   "extends": "airbnb",
   "env": { "mocha": true },
   "rules": {
+    "quotes": ["warn", "double"],
     "semi": [2, "never"],
     "comma-dangle": ["error", "never"],
     "func-names": ["error", "never"],
